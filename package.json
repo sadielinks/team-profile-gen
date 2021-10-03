@@ -1,0 +1,25 @@
+{
+  "name": "team-profile-generator-10",
+  "version": "1.0.0",
+  "description": "By: Sadie Sial",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sadielinks/team-profile-gen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sadielinks/team-profile-gen/issues"
+  },
+  "homepage": "https://github.com/sadielinks/team-profile-gen#readme",
+  "dependencies": {
+    "inquirer": "^8.1.5"
+  }
+}
