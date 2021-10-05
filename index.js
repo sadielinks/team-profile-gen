@@ -149,3 +149,11 @@ const more = async () => {
       writeHTML();
   }
 };
+
+// now to write the file - aka HTML time!
+const writeHTML = () => {
+    fs.writeFileSync('./dist/output.html', generateHTML(team));
+}
+
+// let the call begin! (with 1. manger)
+manager();
