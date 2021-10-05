@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/sadielinks/team-profile-gen#readme",
   "dependencies": {
+    "export": "^0.1.337",
+    "exports": "0.0.1",
     "fs": "0.0.1-security",
     "inquirer": "^8.1.5",
     "lib": "^4.3.3",
