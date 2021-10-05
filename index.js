@@ -122,7 +122,7 @@ const intern = async () => {
   more();
 };
 
-// another function use :D
+// more funciton will prompt if any more team members need to be added (not manager tho)
 const more = async () => {
   const anothaOne = {
     type: "list",
@@ -130,4 +130,22 @@ const more = async () => {
     message: "Would you like to add another engineer or intern?",
     choices: ["Engineer", "Intern", "Nope, all done!"],
   };
+
+  const {moreTeam} = await inquirer.prompt(anothaOne);
+
+  // use switch/case
+  switch (moreTeam) {
+    case "Engineer":
+      engineer();
+      // 'break' causes the stop
+      break;
+
+    case "Intern":
+      intern();
+      break;
+
+    // 'default' runs code if nothing else matches
+    default:
+      writeHTML();
+  }
 };
