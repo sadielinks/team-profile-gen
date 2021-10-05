@@ -67,6 +67,7 @@ The technologies used to create this program were:
 - Javascript
 - Dynamic HTML
 - Node.JS
+- Jest Testing Framework
 <br><br>
 
 ## Screenshots
