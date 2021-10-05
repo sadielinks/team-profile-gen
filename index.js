@@ -34,7 +34,7 @@ const manager = async () => {
     },
     {
       type: "input",
-      name: "office",
+      name: "officeNumber",
       message: "What is the manager's office number?",
     },
   ];
@@ -152,7 +152,7 @@ const more = async () => {
 
 // now to write the file - aka HTML time!
 const writeHTML = () => {
-    fs.writeFileSync('./dist/output.html', generateHTML(team));
+    fs.writeFileSync('./dist/output.html', generateHTML(myTeam));
 }
 
 // let the call begin! (with 1. manger)

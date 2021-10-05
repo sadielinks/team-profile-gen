@@ -22,7 +22,8 @@
   "dependencies": {
     "fs": "0.0.1-security",
     "inquirer": "^8.1.5",
-    "lib": "^4.3.3"
+    "lib": "^4.3.3",
+    "require": "^2.4.20"
   },
   "devDependencies": {
     "jest": "^27.2.4"
