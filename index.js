@@ -52,75 +52,82 @@ const manager = async () => {
 
 // ask inquirer: 2. engingeer
 const engineer = async () => {
-    const engineerQuestions = [
-      {
-        type: "input",
-        name: "name",
-        message: "Hi there, please enter an engingeer's name:",
-      },
-      {
-        type: "input",
-        name: "id",
-        message: "What is this engineer's ID?",
-      },
-      {
-        type: "input",
-        name: "email",
-        message: "What is this engineers's email?",
-      },
-      {
-        type: "input",
-        name: "GitHub",
-        message: "What is this engineer's GitHub?",
-      },
-    ];
-  
-    // use await for promise
-    const { name, id, email, GitHub } = await inquirer.prompt(engineerQuestions);
-  
-    // create variable for manger from class & user prompt answers
-    const engineer = new Engineer(name, id, email, GitHub);
-    team.push(engineer);
-  
-    // call js file from another js file with 'another' if more are to be added
-    more();
-  };
+  const engineerQuestions = [
+    {
+      type: "input",
+      name: "name",
+      message: "Hi there, please enter an engingeer's name:",
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "What is this engineer's ID?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is this engineers's email?",
+    },
+    {
+      type: "input",
+      name: "GitHub",
+      message: "What is this engineer's GitHub?",
+    },
+  ];
 
-  // ask inquirer: 3. intern
-  const intern = async () => {
-    const internQuestions = [
-      {
-        type: "input",
-        name: "name",
-        message: "Hi there, please enter the intern's name:",
-      },
-      {
-        type: "input",
-        name: "id",
-        message: "What is this intern's ID?",
-      },
-      {
-        type: "input",
-        name: "email",
-        message: "What is this intern's email?",
-      },
-      {
-        type: "input",
-        name: "school",
-        message: "What school does this intern attend?",
-      },
-    ];
-  
-    // use await for promise
-    const { name, id, email, school } = await inquirer.prompt(internQuestions);
-  
-    // create variable for manger from class & user prompt answers
-    const intern = new Intern(name, id, email, school);
-    team.push(intern);
-  
-    // call js file from another js file with 'another' if more are to be added
-    more();
-  };
+  // use await for promise
+  const { name, id, email, GitHub } = await inquirer.prompt(engineerQuestions);
+
+  // create variable for manger from class & user prompt answers
+  const engineer = new Engineer(name, id, email, GitHub);
+  team.push(engineer);
+
+  // call js file from another js file with 'another' if more are to be added
+  more();
+};
+
+// ask inquirer: 3. intern
+const intern = async () => {
+  const internQuestions = [
+    {
+      type: "input",
+      name: "name",
+      message: "Hi there, please enter the intern's name:",
+    },
+    {
+      type: "input",
+      name: "id",
+      message: "What is this intern's ID?",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is this intern's email?",
+    },
+    {
+      type: "input",
+      name: "school",
+      message: "What school does this intern attend?",
+    },
+  ];
+
+  // use await for promise
+  const { name, id, email, school } = await inquirer.prompt(internQuestions);
+
+  // create variable for manger from class & user prompt answers
+  const intern = new Intern(name, id, email, school);
+  team.push(intern);
+
+  // call js file from another js file with 'another' if more are to be added
+  more();
+};
 
 // another function use :D
-const 
+const more = async () => {
+  const anothaOne = {
+    type: "list",
+    name: "moreTeam",
+    message: "Would you like to add another engineer or intern?",
+    choices: ["Engineer", "Intern", "Nope, all done!"],
+  };
+};
