@@ -14,6 +14,7 @@ const generateHTML = require("./src/generateHTML");
 const myTeam = [];
 
 // ask inquirer: 1. manager
+// async function so that promise can be used
 const manager = async () => {
   const managerQuestions = [
     {
@@ -23,18 +24,26 @@ const manager = async () => {
     },
     {
       type: "input",
-      name: "title",
+      name: "id",
       message: "What is the manager's ID?",
     },
     {
       type: "input",
-      name: "title",
+      name: "email",
       message: "What is the manager's email?",
     },
     {
       type: "input",
-      name: "title",
+      name: "office",
       message: "What is the manager's office number?",
     },
   ];
+
+// use await for promise
+const {name, id, email, office} = await inquirer.prompt(managerQuestions);
+
+// create variable for manger from class & user prompt answers
+const manager = new Manager(name, id, email, office); team.push(manager);
+// call js file from another js file with 'another'
+another();
 };
