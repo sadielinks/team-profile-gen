@@ -46,8 +46,8 @@ const manager = async () => {
   const manager = new Manager(name, id, email, office);
   team.push(manager);
 
-  // call js file from another js file with 'another'
-  another();
+  // call js file from another js file with 'another' if more are to be added
+  more();
 };
 
 // ask inquirer: 2. engingeer
@@ -82,8 +82,8 @@ const engineer = async () => {
     const engineer = new Engineer(name, id, email, GitHub);
     team.push(engineer);
   
-    // call js file from another js file with 'another'
-    another();
+    // call js file from another js file with 'another' if more are to be added
+    more();
   };
 
   // ask inquirer: 3. intern
@@ -118,8 +118,9 @@ const engineer = async () => {
     const intern = new Intern(name, id, email, school);
     team.push(intern);
   
-    // call js file from another js file with 'another'
-    another();
+    // call js file from another js file with 'another' if more are to be added
+    more();
   };
 
-  
+// another function use :D
+const 
