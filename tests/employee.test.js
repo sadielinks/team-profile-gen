@@ -5,7 +5,11 @@ const Employee = require('./lib/employee');
 
 // step by step
 // testing object
-test('Employee Test')
+describe('Employee Test'), () => {
+    test('Employee Test'), () => {
+        const employeeTest
+    }
+}
 
 // name
 test('Print Employee Name')

@@ -4,6 +4,7 @@
 const Intern = require('./lib/intern');
 
 // testing object
+describe('')
 test('Intern Test')
 
 // name
