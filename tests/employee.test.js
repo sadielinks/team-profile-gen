@@ -4,7 +4,7 @@
 const Employee = require('./lib/employee');
 
 // step by step
-// method
+// testing object
 test('Employee Test')
 
 // name

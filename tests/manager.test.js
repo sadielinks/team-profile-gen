@@ -3,7 +3,7 @@
 // find js file to test
 const Manager = require('./lib/manager');
 
-// method
+// testing object
 test('Manager Test')
 
 // name

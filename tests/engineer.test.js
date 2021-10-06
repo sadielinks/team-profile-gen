@@ -3,7 +3,7 @@
 // find js file to test
 const Engineer = require('./lib/engineer');
 
-// method
+// testing object
 test('Engineer Test')
 
 // name
