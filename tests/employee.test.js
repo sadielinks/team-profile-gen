@@ -8,21 +8,21 @@ const Employee = require('./lib/employee');
 test('Employee Test')
 
 // name
-test('Employee Name')
+test('Print Employee Name')
 
 
 // test name
 
 
 // id
-test('Employee Id')
+test('Print Employee Id')
 
 
 // test id
 
 
 // email
-test('Employee Email')
+test('Print Employee Email')
 
 
 // test email
