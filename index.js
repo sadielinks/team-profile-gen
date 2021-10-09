@@ -8,7 +8,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
 // variable for generating the HTML product
-const generateHTML = require('');
+const generateTeamHTML = require('./src/generateTeamHTML');
 
 // creating team variable to encapsulate inside index.html()
 const myTeam = [];
@@ -152,7 +152,7 @@ const more = async () => {
 
 // now to write the file - aka HTML time!
 const writeHTML = () => {
-    fs.writeFileSync('./dist/employee.html', generateHTML(myTeam));
+    fs.writeFileAsync('./dist/employee.html', generateTeamHTML(myTeam));
 }
 
 // let the call begin! (with 1. manger)
