@@ -8,9 +8,9 @@ const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
 
 // variable for generating the HTML product
-const generateHTML = require("./src/generateHTML");
+const generateHTML = require("./src/index.html");
 
-// creating team variable to encapsulate inside generateHTML()
+// creating team variable to encapsulate inside index.html()
 const myTeam = [];
 
 // ask inquirer: 1. manager
