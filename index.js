@@ -1,14 +1,14 @@
 // instal node_modules with npm init, npm i, npm inquirer, + npm fs
-const inquirer = require("inquirer");
-const fs = require("fs");
+const inquirer = require('inquirer');
+const fs = require('fs');
 
-// create constructor classes (using js files from .lib/)
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
+// create constructor classes (using js files from ./lib/)
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
 
 // variable for generating the HTML product
-const generateHTML = require("./src/index.html");
+const generateHTML = require('');
 
 // creating team variable to encapsulate inside index.html()
 const myTeam = [];
@@ -18,23 +18,23 @@ const myTeam = [];
 const manager = async () => {
   const managerQuestions = [
     {
-      type: "input",
-      name: "name",
+      type: 'input',
+      name: 'name',
       message: "Hi there, please enter the manager's name:",
     },
     {
-      type: "input",
-      name: "id",
+      type: 'input',
+      name: 'id',
       message: "What is the manager's ID?",
     },
     {
-      type: "input",
-      name: "email",
+      type: 'input',
+      name: 'email',
       message: "What is the manager's email?",
     },
     {
-      type: "input",
-      name: "officeNumber",
+      type: 'input',
+      name: 'officeNumber',
       message: "What is the manager's office number?",
     },
   ];
@@ -44,7 +44,7 @@ const manager = async () => {
 
   // create variable for manger from class & user prompt answers
   const manager = new Manager(name, id, email, office);
-  team.push(manager);
+  myTeam.push(manager);
 
   // call js file from another js file with 'another' if more are to be added
   more();
@@ -54,23 +54,23 @@ const manager = async () => {
 const engineer = async () => {
   const engineerQuestions = [
     {
-      type: "input",
-      name: "name",
+      type: 'input',
+      name: 'name',
       message: "Hi there, please enter an engingeer's name:",
     },
     {
-      type: "input",
-      name: "id",
+      type: 'input',
+      name: 'id',
       message: "What is this engineer's ID?",
     },
     {
-      type: "input",
-      name: "email",
+      type: 'input',
+      name: 'email',
       message: "What is this engineers's email?",
     },
     {
-      type: "input",
-      name: "GitHub",
+      type: 'input',
+      name: 'GitHub',
       message: "What is this engineer's GitHub?",
     },
   ];
@@ -80,7 +80,7 @@ const engineer = async () => {
 
   // create variable for manger from class & user prompt answers
   const engineer = new Engineer(name, id, email, GitHub);
-  team.push(engineer);
+  myTeam.push(engineer);
 
   // call js file from another js file with 'another' if more are to be added
   more();
@@ -90,23 +90,23 @@ const engineer = async () => {
 const intern = async () => {
   const internQuestions = [
     {
-      type: "input",
-      name: "name",
+      type: 'input',
+      name: 'name',
       message: "Hi there, please enter the intern's name:",
     },
     {
-      type: "input",
-      name: "id",
+      type: 'input',
+      name: 'id',
       message: "What is this intern's ID?",
     },
     {
-      type: "input",
-      name: "email",
+      type: 'input',
+      name: 'email',
       message: "What is this intern's email?",
     },
     {
-      type: "input",
-      name: "school",
+      type: 'input',
+      name: 'school',
       message: "What school does this intern attend?",
     },
   ];
@@ -116,7 +116,7 @@ const intern = async () => {
 
   // create variable for manger from class & user prompt answers
   const intern = new Intern(name, id, email, school);
-  team.push(intern);
+  myTeam.push(intern);
 
   // call js file from another js file with 'another' if more are to be added
   more();
@@ -125,22 +125,22 @@ const intern = async () => {
 // more funciton will prompt if any more team members need to be added (not manager tho)
 const more = async () => {
   const anothaOne = {
-    type: "list",
-    name: "moreTeam",
-    message: "Would you like to add another engineer or intern?",
-    choices: ["Engineer", "Intern", "Nope, all done!"],
+    type: 'list',
+    name: 'moreTeam',
+    message: 'Would you like to add another engineer or intern?',
+    choices: ['Engineer', 'Intern', 'Nope, all done!'],
   };
 
   const {moreTeam} = await inquirer.prompt(anothaOne);
 
   // use switch/case
   switch (moreTeam) {
-    case "Engineer":
+    case 'Engineer':
       engineer();
       // 'break' causes the stop
       break;
 
-    case "Intern":
+    case 'Intern':
       intern();
       break;
 
@@ -152,7 +152,7 @@ const more = async () => {
 
 // now to write the file - aka HTML time!
 const writeHTML = () => {
-    fs.writeFileSync('./dist/output.html', generateHTML(myTeam));
+    fs.writeFileSync('./dist/employee.html', generateHTML(myTeam));
 }
 
 // let the call begin! (with 1. manger)
