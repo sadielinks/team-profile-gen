@@ -76,12 +76,12 @@ const gimmeEngineer = (engineer) => {
   `<div class="card employee-card m-3 shadow-lg col-3">
     <div class="card-header bg-info text-white">
         <h2 class="card-title">${engineer.name}</h2>
-        <h3 class="card-title"><i class="fas fa-laptop-code"></i>Engineer</h3>
+        <h3 class="card-title"><i class="fas fa-laptop-code"></i> Engineer</h3>
     </div>
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
             <li class="list-group-item">ID: ${engineer.id}</li>
-            <li class="list-group-item">Email: <a href="mailto: ${engineer.email}"></a></li>
+            <li class="list-group-item">Email: <a href="mailto: ${engineer.getEmail}"></a></li>
             <li class="list-group-item">Github: ${engineer.GitHub}</li>
         </ul>
     </div>

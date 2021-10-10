@@ -134,12 +134,12 @@ const more = async () => {
 
   // use switch/case
   switch (moreTeam) {
-    case 'Engineer':
+    case 'Yes, an Engineer':
       engineer();
       // 'break' causes the stop
       break;
 
-    case 'Intern':
+    case 'Yes, an Intern':
       intern();
       break;
 
@@ -152,7 +152,6 @@ const more = async () => {
 // now to write the file - aka HTML time!
 const gimmeHTML = () => {
     fs.writeFileSync('./dist/index.html', employeeHTML(myTeam));
-    console.log('Team Generated!')
 }
 
 // let the call begin!
