@@ -1,5 +1,5 @@
 // start adding in the data from index.js to HTML
-const generateTeamHTML = (myTeam) => {
+const employeeHTML = (myTeam) => {
   let teamCards = "";
   myTeam.forEach((employee) => {
     switch (employee.getRole()) {
@@ -57,12 +57,12 @@ const gimmeManager = (manager) => {
   `<div class="card employee-card m-3 shadow-lg col-3">
   <div class="card-header bg-info text-white">
       <h2 class="card-title">${manager.name}</h2>
-      <h3 class="card-title"><i class="fas fa-chalkboard-teacher"></i>/h3>
+      <h3 class="card-title"><i class="fas fa-chalkboard-teacher"></i> Manager</h3>
   </div>
   <div class="card-body bg-light">
       <ul class="list-group font-weight-bold">
           <li class="list-group-item">ID: ${manager.id}</li>
-          <li class="list-group-item">Email: ${manager.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+          <li class="list-group-item">Email: <a href="mailto: ${manager.email}"></a></li>
           <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
       </ul>
   </div>
@@ -76,12 +76,12 @@ const gimmeEngineer = (engineer) => {
   `<div class="card employee-card m-3 shadow-lg col-3">
     <div class="card-header bg-info text-white">
         <h2 class="card-title">${engineer.name}</h2>
-        <h3 class="card-title"><i class="fas fa-laptop-code"></i></h3>
+        <h3 class="card-title"><i class="fas fa-laptop-code"></i>Engineer</h3>
     </div>
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
             <li class="list-group-item">ID: ${engineer.id}</li>
-            <li class="list-group-item">Email: ${engineer.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">Email: <a href="mailto: ${engineer.email}"></a></li>
             <li class="list-group-item">Github: ${engineer.GitHub}</li>
         </ul>
     </div>
@@ -95,12 +95,12 @@ const gimmeIntern = (intern) => {
   `<div class="card employee-card m-3 shadow-lg col-3">
     <div class="card-header bg-info text-white">
         <h2 class="card-title">${intern.name}</h2>
-        <h3 class="card-title"><i class="fas fa-graduation-cap"></i></h3>
+        <h3 class="card-title"><i class="fas fa-graduation-cap"></i> Intern</h3>
     </div>
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
             <li class="list-group-item">ID: ${intern.id}</li>
-            <li class="list-group-item">Email: ${intern.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">Email: <a href="mailto: ${intern.email}"></a></li>
             <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
@@ -110,4 +110,4 @@ const gimmeIntern = (intern) => {
 
 
 
-module.exports = generateTeamHTML;
+module.exports = employeeHTML;

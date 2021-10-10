@@ -8,7 +8,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
 // variable for generating the HTML product
-const generateTeamHTML = require('./dist/employeeHTML');
+const employeeHTML = require('./src/employeeHTML');
 
 // creating team variable to encapsulate inside (member).html's
 var myTeam = [];
@@ -40,13 +40,13 @@ const manager = async () => {
   ];
 
   // use await for promise
-  const { name, id, email, office } = await inquirer.prompt(managerQuestions);
+  const { name, id, email, officeNumber } = await inquirer.prompt(managerQuestions);
 
   // create variable for manger from class & user prompt answers
-  const manager = new Manager(name, id, email, office);
+  const manager = new Manager(name, id, email, officeNumber);
   myTeam.push(manager);
   console.log('Manager added!')
-  // call js file from another js file with 'another' if more are to be added
+  // call 'another' if more are to be added
   more();
 };
 
@@ -82,7 +82,7 @@ const engineer = async () => {
   const engineer = new Engineer(name, id, email, GitHub);
   myTeam.push(engineer);
   console.log('Engineer added!')
-  // call js file from another js file with 'another' if more are to be added
+  // call 'another' if more are to be added
   more();
 };
 
@@ -118,7 +118,7 @@ const intern = async () => {
   const intern = new Intern(name, id, email, school);
   myTeam.push(intern);
   console.log('Intern added!')
-  // call js file from another js file with 'another' if more are to be added
+  // call 'another' if more are to be added
   more();
 };
 
@@ -151,18 +151,9 @@ const more = async () => {
 
 // now to write the file - aka HTML time!
 const gimmeHTML = () => {
-    fs.writeFileSync('', data, generateTeamHTML(myTeam));
+    fs.writeFileSync('./dist/index.html', employeeHTML(myTeam));
     console.log('Team Generated!')
 }
-
-// // now to write the file
-// function gimmeHTML(fileName, data) {
-//   return fs.writeFileSync(fileName, data, function (err, res) {
-//       if (err) throw err;
-//       console.log('Team Generated!')
-//   })
-// }
-
 
 // let the call begin!
 manager();
