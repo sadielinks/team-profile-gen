@@ -128,7 +128,7 @@ const more = async () => {
     type: 'list',
     name: 'moreTeam',
     message: 'Would you like to add another engineer or intern?',
-    choices: ['Engineer', 'Intern', 'Nope, all done!'],
+    choices: ['Yes, an Engineer', 'Yes, an Intern', 'Nope, all done!'],
   };
 
   const {moreTeam} = await inquirer.prompt(anothaOne);
@@ -139,11 +139,9 @@ const more = async () => {
       engineer();
       // 'break' causes the stop
       break;
-
     case 'Intern':
       intern();
       break;
-
     // 'default' runs code if nothing else matches
     default:
       writeHTML();

@@ -1,34 +1,28 @@
 {
-  "name": "team-profile-generator-10",
+  "name": "team-profile-generator",
   "version": "1.0.0",
-  "description": "By: Sadie Sial",
+  "description": "",
   "main": "index.js",
   "directories": {
-    "test": "tests"
+    "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sadielinks/team-profile-gen.git"
+    "url": "git+https://github.com/krysmit/team-profile-generator.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sadielinks/team-profile-gen/issues"
+    "url": "https://github.com/krysmit/team-profile-generator/issues"
   },
-  "homepage": "https://github.com/sadielinks/team-profile-gen#readme",
-  "dependencies": {
-    "export": "^0.1.337",
-    "exports": "0.0.1",
-    "fs": "0.0.1-security",
-    "inquirer": "^8.1.5",
-    "lib": "^4.3.3",
-    "path": "^0.12.7",
-    "require": "^2.4.20"
-  },
+  "homepage": "https://github.com/krysmit/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^27.2.4"
+  },
+  "dependencies": {
+    "inquirer": "^8.1.5"
   }
 }
