@@ -1,28 +1,17 @@
 // test for intern class
 
 // find js file to test
-const Intern = require('./lib/intern');
+const Intern = require('../lib/intern');
 
-// testing object
-describe('')
-test('Intern Test')
+test('School Test', () => {
+    const testValue = 'Northwestern University';
+    const schoolTest = new Intern('Kobe', 24, 'lakers@fakegmail', testValue);
+    // getSchool from intern.js
+    expect(schoolTest.getSchool()).toBe(testValue);
+});
 
-// name
-test('Print Intern Name')
-
-
-// test name
-
-
-// id
-test('Print Intern Id')
-
-
-// test id
-
-
-// email
-test('Print Intern Email')
-
-
-// test email
+test('Role Test', () => {
+    const testValue = 'Intern';
+    const roleTest = new Intern('Kobe', 24, 'lakers@fakegmail', 1);
+    expect(roleTest.getRole()).toBe(testValue);
+});
