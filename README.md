@@ -99,7 +99,7 @@ The technologies used to create this program were:
 ```
 Generated Team HTML:
 ```
-![Screenshot](assests/images/dummyscreenshot.png)
+![Screenshot](assests/images/screenshot.png)
 
 ```
 Command Line question/answer:
@@ -125,9 +125,9 @@ Jest Testing Video:
 
 ## Links
 
-- [Walkthrough Video](https://watch.screencastify.com/v/U0BZppp7naQRRp4kyqrM)
+- [Walkthrough Video](https://watch.screencastify.com/v/dllRiyzuDIId6wjwH3hR
 
-- [Testing Video](https://watch.screencastify.com/v/uyL4gp8PbmMyCIOUK5Ux)
+- [Testing Video](https://watch.screencastify.com/v/jKS4WXLY4oCkT1KZdAOS)
 
 - [GitHub Repository](https://github.com/sadielinks/team-profile-gen)
 
