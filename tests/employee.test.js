@@ -1,32 +1,17 @@
 // creating tests for Employee parent class
-
 // find the js file to test
-const Employee = require('./lib/employee');
+const Employee = require('../lib/employee');
 
-// step by step
-// testing object
-describe('Employee Test'), () => {
-    test('Employee Test'), () => {
-        const employeeTest
-    }
-}
-
-// name
-test('Print Employee Name')
+// name testing
+test("Name Test", () => {
+    const testValue = "Kobe";
+    const nameTest = new Employee(testValue);
+    expect(nameTest.getName()).toBe(testValue);
+  });
 
 
-// test name
-
-
-// id
+// id testing
 test('Print Employee Id')
 
-
-// test id
-
-
-// email
+// email testing
 test('Print Employee Email')
-
-
-// test email
