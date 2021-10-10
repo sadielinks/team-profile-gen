@@ -35,4 +35,4 @@ function generateTeamHTML(data) {
 
 }
 
-module.exports = generateMarkdown;
+module.exports = generateTeamHTML;

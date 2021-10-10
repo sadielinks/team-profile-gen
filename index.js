@@ -2,13 +2,19 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// template to fill (using js files from ./dist/)
+const generateManager = require('./dist/managerHTML');
+const generateEngineer = require('./dist/engineerHTML');
+const generateIntern = require('./dist/internHTML');
+
 // create constructor classes (using js files from ./lib/)
 const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
 // variable for generating the HTML product
-const generateTeamHTML = require('./src/generateTeamHTML');
+const generateTeamHTML = require('./dist/employeeHTML');
+
 
 // creating team variable to encapsulate inside index.html()
 const myTeam = [];
@@ -45,7 +51,7 @@ const manager = async () => {
   // create variable for manger from class & user prompt answers
   const manager = new Manager(name, id, email, office);
   myTeam.push(manager);
-
+  console.log('Manager added!')
   // call js file from another js file with 'another' if more are to be added
   more();
 };
@@ -81,7 +87,7 @@ const engineer = async () => {
   // create variable for manger from class & user prompt answers
   const engineer = new Engineer(name, id, email, GitHub);
   myTeam.push(engineer);
-
+  console.log('Engineer added!')
   // call js file from another js file with 'another' if more are to be added
   more();
 };
@@ -117,7 +123,7 @@ const intern = async () => {
   // create variable for manger from class & user prompt answers
   const intern = new Intern(name, id, email, school);
   myTeam.push(intern);
-
+  console.log('Intern added!')
   // call js file from another js file with 'another' if more are to be added
   more();
 };
@@ -130,7 +136,6 @@ const more = async () => {
     message: 'Would you like to add another engineer or intern?',
     choices: ['Yes, an Engineer', 'Yes, an Intern', 'Nope, all done!'],
   };
-
   const {moreTeam} = await inquirer.prompt(anothaOne);
 
   // use switch/case
@@ -150,9 +155,17 @@ const more = async () => {
   }
 };
 
+// // now to write the file - aka HTML time!
+// const gimmeHTML = () => {
+//     fs.writeFileAsync('', generateTeamHTML(myTeam));
+// }
+
 // now to write the file - aka HTML time!
-const gimmeHTML = () => {
-    fs.writeFileAsync('./dist/employee.html', generateTeamHTML(myTeam));
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(fileName, data, function (err, res) {
+      if (err) throw err;
+      console.log('Team Generated!')
+  })
 }
 
 // let the call begin! (with 1. manger)
