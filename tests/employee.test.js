@@ -24,7 +24,7 @@ test('Id Test', () => {
 test('Email Test', () => {
     const testValue = 'lakers@fakemail.com';
     // add previous (name + id) values with this new testValue
-    const idTest = new Employee('Kobe', '24', testValue);
+    const idTest = new Employee('Kobe', 24, testValue);
     // getId from employee.js
     expect(idTest.getEmail()).toBe(testValue);
   });
