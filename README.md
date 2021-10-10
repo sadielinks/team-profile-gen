@@ -20,8 +20,7 @@ ___
 
 ## Description <br>
 
-WORK IN PROGRESS :D 
-This application allows for users to install, run, and generate a team profile on an HTML document.
+This command-line application allows for users to install, run, and generate a team profile on an HTML document. Users will specifically be prompted to answer their team manager, engineer(s), and/or intern(s) alongside with corresponding information pertaining to each member's role. Their selected inputs will generate their custom HTML homepage where they can view their team's information conveniently in one place!
 
 
 
@@ -85,8 +84,6 @@ Once they have answered the prompts to the best of their ability, a new file cal
 ```
 npm test
 ```
-
-<br><br>
 
 
 ## Technologies
