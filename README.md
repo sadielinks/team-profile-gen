@@ -99,7 +99,7 @@ The technologies used to create this program were:
 ```
 Generated Team HTML:
 ```
-![Screenshot](assests/dummyscreenshot.png)
+![Screenshot](assests/images/dummyscreenshot.png)
 
 ```
 Walkthrough Video:
@@ -109,7 +109,7 @@ Walkthrough Video:
 ```
 Jest Testing:
 ```
-![Screenshot](assests/screenshot2.png)
+![Screenshot](assests/images/screenshot2.png)
 
 ```
 Jest Testing Video:
