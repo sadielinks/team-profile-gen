@@ -1,4 +1,4 @@
-const generateIntern = require("./internHTML")
+const generateEngineer = require("./")
 
 // engineer card + details to be dynamically added by user answers
 function generateEngineer(responses) {

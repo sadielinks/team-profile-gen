@@ -1,7 +1,22 @@
-function generateTeamHTML(data) {
+const generateTeamHTML = (myTeam) => {
+  let teamCards = "";
+  myTeam.forEach((employee) => {
+    switch (employee.getRole()) {
+      case "Manager":
+        teamCards += gimmeManager(employee);
+        break;
+      case "Engineer":
+        teamCards += gimmeEngineer(employee);
+        break;
+      case "Intern":
+        teamCards += gimmeIntern(employee);
+        break;
+    }
+  });
+  return;
 
-`<!-- central html! -->
-<!DOCTYPE html>
+  // central html!
+  `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,12 +42,11 @@ function generateTeamHTML(data) {
     </div>
     <div class="container">
       <div class="team-area row d-flex justify-content-center">
-          <!-- manager, engineer, & intern cards to appear here -->
+      ${teamCards}
       </div>
     </div>
   </body>
 </html>`;
-
-}
+};
 
 module.exports = generateTeamHTML;
