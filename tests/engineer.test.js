@@ -1,27 +1,18 @@
 // test for engineer class
 
 // find js file to test
-const Engineer = require('./lib/engineer');
+const Engineer = require('../lib/engineer');
 
-// testing object
-test('Engineer Test')
+test('GitHub Test', () => {
+    const testValue = 'kobelinks';
+    // same as employee test, add in values to tack on testing value (1)
+    const githubTest = new Engineer('Kobe', 24, 'lakers@fakegmail', testValue);
+    // getGitHub from engineer.js
+    expect(githubTest.getGitHub()).toBe(testValue);
+});
 
-// name
-test('Print Engineer Name')
-
-
-// test name
-
-
-// id
-test('Print Engineer Id')
-
-
-// test id
-
-
-// email
-test('Print Engineer Email')
-
-
-// test email
+test('Role Test', () => {
+    const testValue = 'Engineer';
+    const roleTest = new Engineer('Kobe', 24, 'lakers@fakegmail', 1);
+    expect(roleTest.getRole()).toBe(testValue);
+});
