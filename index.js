@@ -15,7 +15,7 @@ const Intern = require('./lib/intern');
 // variable for generating the HTML product
 const generateTeamHTML = require('./dist/employeeHTML');
 
-// creating team variable to encapsulate inside index.html()
+// creating team variable to encapsulate inside (member).html's
 const myTeam = [];
 const myManager = [];
 const myEngineer = [];
@@ -159,41 +159,45 @@ const more = async () => {
 
 // // now to write the file - aka HTML time!
 // const gimmeHTML = () => {
-//     fs.writeFileAsync('', generateTeamHTML(myTeam));
+//     fs.writeFileSync('', data, generateTeamHTML(myTeam));
 // }
 
 // now to write the file
-function writeToFile(fileName, data) {
-  return fs.writeFileSync(fileName, data, function (err, res) {
-      if (err) throw err;
-      console.log('Team Generated!')
-  })
-}
+// function writeToFile(fileName, data) {
+//   return fs.writeFileSync(fileName, data, function (err, res) {
+//       if (err) throw err;
+//       console.log('Team Generated!')
+//   })
+// }
 
-// let the call begin!
-const gimmeHTML = () => {
-  console.log(myManager, myEngineer, myIntern);
-  var managerHTML = ''
-  for(let i=0; i < myManager.length; i++) {
-     managerHTML += generateManager(myManager[i]);
-  }
-  console.log('manager created', managerHTML);
-  var engineerHTML = ''
-  for(let i=0; i < myEngineer.length; i++) {
-      engineerHTML += generateEngineer(myEngineer[i]);
-  }
-  console.log('engineer created', engineerHTML);
-  var internHTML = ''
-  for(let i=0; i < myIntern.length; i++) {
-      internHTML += generateIntern(myIntern[i]);
-  }
-  console.log('intern created', internHTML);
-  var finalHTML = managerHTML + engineerHTML + internHTML;
-  var fileData = generateTeamHTML(finalHTML);
-  fs.writeFileSync('index.HTML', fileData, function(err, res) {
-      if(err) throw err;
-  })
-  console.log('Team HTML Generated Successfully!', fileData)
-}
+const writeHTML = () => {
+  fs.writeFileSync("./output/index.html", generateHTML(team));
+};
+
+// // let the call begin!
+// const gimmeHTML = () => {
+//   console.log(myManager, myEngineer, myIntern);
+//   var managerHTML = ''
+//   for(let i=0; i < myManager.length; i++) {
+//      managerHTML += generateManager(myManager[i]);
+//   }
+//   console.log('manager created', managerHTML);
+//   var engineerHTML = ''
+//   for(let i=0; i < myEngineer.length; i++) {
+//       engineerHTML += generateEngineer(myEngineer[i]);
+//   }
+//   console.log('engineer created', engineerHTML);
+//   var internHTML = ''
+//   for(let i=0; i < myIntern.length; i++) {
+//       internHTML += generateIntern(myIntern[i]);
+//   }
+//   console.log('intern created', internHTML);
+//   var finalHTML = managerHTML + engineerHTML + internHTML;
+//   var fileData = generateTeamHTML(finalHTML);
+//   fs.writeFileSync('index.HTML', fileData, function(err, res) {
+//       if(err) throw err;
+//   })
+//   console.log('Team HTML Generated Successfully!', fileData)
+// }
 
 manager();

@@ -55,14 +55,36 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 
-Users will need to insgtall the following in their command line:
+1. Users will need to use `git clone` to clone this repo into their repository. 
+
+- HTTPS
+```
+https://github.com/sadielinks/team-profile-gen.git
+```
+
+- SSH
+```
+git@github.com:sadielinks/team-profile-gen.git
+```
+
+2. They will then need to install the following in their command line:
 ```
 npm i
 ```
 
-
 ## Usage
-After the installation process, users will then need to run `node index.js` in their command line. Once they have answered the prompts to the best of their ability, a new file called, `generateTeamHTML.js` will be created in the main folder.
+1. After the installation process, users will then need to run the following in their command line:
+```
+node index.js
+```
+Once they have answered the prompts to the best of their ability, a new file called, `generateTeamHTML.js` will be created in the main folder.
+
+
+
+2. In order to run the Jest Testing, users will need to use the following in their command line:
+```
+npm test
+```
 
 <br><br>
 
@@ -80,7 +102,7 @@ The technologies used to create this program were:
 ```
 Generated Team HTML:
 ```
-![Screenshot](./assets/images/screenshot.png)
+![Screenshot](assests/dummyscreenshot.png)
 
 ```
 Walkthrough Video:
