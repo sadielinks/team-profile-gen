@@ -88,7 +88,9 @@ screenshot 2 preview:
 
 ## Links
 
-- [Link]()
+- [Walkthrough Video](https://watch.screencastify.com/v/uyL4gp8PbmMyCIOUK5Ux)
+
+- [Testing Video](https://watch.screencastify.com/v/uyL4gp8PbmMyCIOUK5Ux)
 
 - [GitHub Repository](https://github.com/sadielinks/team-profile-gen)
 
