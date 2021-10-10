@@ -1,4 +1,6 @@
-<!-- central html! -->
+function generateTeamHTML(data) {
+
+`<!-- central html! -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,4 +31,8 @@
       </div>
     </div>
   </body>
-</html>
+</html>`;
+
+}
+
+module.exports = generateMarkdown;

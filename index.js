@@ -139,17 +139,19 @@ const more = async () => {
       engineer();
       // 'break' causes the stop
       break;
+
     case 'Intern':
       intern();
       break;
+
     // 'default' runs code if nothing else matches
     default:
-      writeHTML();
+      gimmeHTML();
   }
 };
 
 // now to write the file - aka HTML time!
-const writeHTML = () => {
+const gimmeHTML = () => {
     fs.writeFileAsync('./dist/employee.html', generateTeamHTML(myTeam));
 }
 
