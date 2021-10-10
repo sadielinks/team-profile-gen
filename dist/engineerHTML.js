@@ -1,3 +1,5 @@
+const generateIntern = require("./internHTML")
+
 // engineer card + details to be dynamically added by user answers
 function generateEngineer(responses) {
     return (`
@@ -17,3 +19,5 @@ function generateEngineer(responses) {
 </div>`
     )
 }
+
+module.exports = generateEngineer;

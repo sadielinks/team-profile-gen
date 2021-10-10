@@ -9,13 +9,13 @@ function generateManager(responses) {
     </div>
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
-            <li class="list-group-item">${responses.id}</li>
-            <li class="list-group-item">${responses.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
-            <li class="list-group-item">${responses.officeNumber}</li>
+            <li class="list-group-item">ID: ${responses.id}</li>
+            <li class="list-group-item">Email: ${responses.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">Office Number: ${responses.officeNumber}</li>
         </ul>
     </div>
 </div>`
 )
 }
 
-module.exports = generateManager
+module.exports = generateManager;
