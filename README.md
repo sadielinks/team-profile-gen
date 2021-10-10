@@ -102,6 +102,11 @@ Generated Team HTML:
 ![Screenshot](assests/images/dummyscreenshot.png)
 
 ```
+Command Line question/answer:
+```
+![Screenshot](assests/images/screenshot2.png)
+
+```
 Walkthrough Video:
 ```
 
@@ -109,7 +114,7 @@ Walkthrough Video:
 ```
 Jest Testing:
 ```
-![Screenshot](assests/images/screenshot2.png)
+![Screenshot](assests/images/screenshot3.png)
 
 ```
 Jest Testing Video:
