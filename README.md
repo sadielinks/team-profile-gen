@@ -76,7 +76,7 @@ npm i
 ```
 node index.js
 ```
-Once they have answered the prompts to the best of their ability, a new file called, `generateTeamHTML.js` will be created in the main folder.
+Once they have answered the prompts to the best of their ability, a new file called, `generateTeamHTML.js` will be created in the `dist` folder.
 
 
 
