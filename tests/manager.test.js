@@ -1,27 +1,6 @@
 // test for manager class
 
 // find js file to test
-const Manager = require('./lib/manager');
+const Manager = require('../lib/manager');
 
-// testing object
-test('Manager Test')
-
-// name
-test('Print Manager Name')
-
-
-// test name
-
-
-// id
-test('Print Manager Id')
-
-
-// test id
-
-
-// email
-test('Print Manager Email')
-
-
-// test email
+test('Office Number Test', )
