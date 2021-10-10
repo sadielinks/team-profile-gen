@@ -18,6 +18,9 @@ const generateTeamHTML = require('./dist/employeeHTML');
 
 // creating team variable to encapsulate inside index.html()
 const myTeam = [];
+const myManager = [];
+const myEngineer = [];
+const myIntern = [];
 
 // ask inquirer: 1. manager
 // async function so that promise can be used
@@ -160,7 +163,7 @@ const more = async () => {
 //     fs.writeFileAsync('', generateTeamHTML(myTeam));
 // }
 
-// now to write the file - aka HTML time!
+// now to write the file
 function writeToFile(fileName, data) {
   return fs.writeFileSync(fileName, data, function (err, res) {
       if (err) throw err;
@@ -168,5 +171,30 @@ function writeToFile(fileName, data) {
   })
 }
 
-// let the call begin! (with 1. manger)
+// let the call begin!
+const gimmeHTML = () => {
+  console.log(myManager, myEngineer, myIntern);
+  var managerHTML = ''
+  for(let i=0; i < myManager.length; i++) {
+     managerHTML += generateManager(myManager[i]);
+  }
+  console.log('manager created', managerHTML);
+  var engineerHTML = ''
+  for(let i=0; i < myEngineer.length; i++) {
+      engineerHTML += generateEngineer(myEngineer[i]);
+  }
+  console.log('engineer created', engineerHTML);
+  var internHTML = ''
+  for(let i=0; i < myIntern.length; i++) {
+      internHTML += generateIntern(myIntern[i]);
+  }
+  console.log('intern created', internHTML);
+  var finalHTML = managerHTML + engineerHTML + internHTML;
+  var fileData = generateTeamHTML(finalHTML);
+  fs.writeFileSync('index.HTML', fileData, function(err, res) {
+      if(err) throw err;
+  })
+  console.log('Team HTML Generated Successfully!', fileData)
+}
+
 manager();
