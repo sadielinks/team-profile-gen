@@ -23,6 +23,8 @@ ___
 WORK IN PROGRESS :D 
 This application allows for users to install, run, and generate a team profile on an HTML document.
 
+
+
 ### User Story:
 
 ```
@@ -53,10 +55,14 @@ THEN I exit the application, and the HTML is generated
 
 ## Installation
 
+Users will need to insgtall the following in their command line:
+```
+npm i
+```
 
 
 ## Usage
-
+After the installation process, users will then need to run `node index.js` in their command line. Once they have answered the prompts to the best of their ability, a new file called, `generateTeamHTML.js` will be created in the main folder.
 
 <br><br>
 
