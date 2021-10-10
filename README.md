@@ -109,6 +109,7 @@ Command Line question/answer:
 ```
 Walkthrough Video:
 ```
+https://user-images.githubusercontent.com/87392794/136686100-9a05924c-7465-4cdc-8ef5-5e01d8123fe1.mov
 
 
 ```
@@ -119,13 +120,15 @@ Jest Testing:
 ```
 Jest Testing Video:
 ```
+https://user-images.githubusercontent.com/87392794/136686106-71cf9421-60b2-444b-8ea1-505f2198c92c.mov
+
 
 
 <br>
 
 ## Links
 
-- [Walkthrough Video](https://watch.screencastify.com/v/dllRiyzuDIId6wjwH3hR
+- [Walkthrough Video](https://watch.screencastify.com/v/dllRiyzuDIId6wjwH3hR)
 
 - [Testing Video](https://watch.screencastify.com/v/jKS4WXLY4oCkT1KZdAOS)
 
