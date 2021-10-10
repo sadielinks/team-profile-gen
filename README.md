@@ -125,7 +125,7 @@ Jest Testing Video:
 
 ## Links
 
-- [Walkthrough Video](https://watch.screencastify.com/v/uyL4gp8PbmMyCIOUK5Ux)
+- [Walkthrough Video](https://watch.screencastify.com/v/U0BZppp7naQRRp4kyqrM)
 
 - [Testing Video](https://watch.screencastify.com/v/uyL4gp8PbmMyCIOUK5Ux)
 
