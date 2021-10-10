@@ -15,7 +15,6 @@ const Intern = require('./lib/intern');
 // variable for generating the HTML product
 const generateTeamHTML = require('./dist/employeeHTML');
 
-
 // creating team variable to encapsulate inside index.html()
 const myTeam = [];
 const myManager = [];

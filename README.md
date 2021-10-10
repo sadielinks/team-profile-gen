@@ -72,16 +72,23 @@ The technologies used to create this program were:
 
 ## Screenshots
 ```
-screenshot 1 preview:
+Generated Team HTML:
 ```
 ![Screenshot](./assets/images/screenshot.png)
 
 ```
-screenshot 2 preview:
+Walkthrough Video:
 ```
-![Screenshot](./assets/images/screenshot3.png)
 
 
+```
+Jest Testing:
+```
+![Screenshot](assests/screenshot2.png)
+
+```
+Jest Testing Video:
+```
 
 
 <br>
