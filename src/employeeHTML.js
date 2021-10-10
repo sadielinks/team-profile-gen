@@ -61,8 +61,8 @@ const gimmeManager = (manager) => {
   </div>
   <div class="card-body bg-light">
       <ul class="list-group font-weight-bold">
-          <li class="list-group-item">ID: ${manager.id}</li>
-          <li class="list-group-item">Email: <a href="mailto: ${manager.email}"></a></li>
+          <li class="list-group-item">ID: ${manager.email}</li>
+          <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
           <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
       </ul>
   </div>
@@ -81,9 +81,9 @@ const gimmeEngineer = (engineer) => {
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
             <li class="list-group-item">ID: ${engineer.id}</li>
-            <li class="list-group-item">Email: <a href="mailto: ${engineer.email}"></a></li>
-            <li class="list-group-item">Github: ${engineer.GitHub}</li>
-        </ul>
+            <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+            <li class="list-group-item">GitHub: <a target=_blank href="https://github.com/${engineer.GitHub}">${engineer.GitHub}</a></li>
+            </ul>
     </div>
 </div>`
   )
@@ -100,7 +100,7 @@ const gimmeIntern = (intern) => {
     <div class="card-body bg-light">
         <ul class="list-group font-weight-bold">
             <li class="list-group-item">ID: ${intern.id}</li>
-            <li class="list-group-item">Email: <a href="mailto: ${intern.email}"></a></li>
+            <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
             <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
