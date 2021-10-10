@@ -61,7 +61,7 @@ const gimmeManager = (manager) => {
   </div>
   <div class="card-body bg-light">
       <ul class="list-group font-weight-bold">
-          <li class="list-group-item">ID: ${manager.email}</li>
+          <li class="list-group-item">ID: ${manager.id}</li>
           <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
           <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
       </ul>
