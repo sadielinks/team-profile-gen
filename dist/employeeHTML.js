@@ -1,3 +1,4 @@
+// start adding in the data from index.js to HTML
 const generateTeamHTML = (myTeam) => {
   let teamCards = "";
   myTeam.forEach((employee) => {
@@ -13,7 +14,7 @@ const generateTeamHTML = (myTeam) => {
         break;
     }
   });
-  return;
+  return (
 
   // central html!
   `<!DOCTYPE html>
@@ -46,12 +47,13 @@ const generateTeamHTML = (myTeam) => {
       </div>
     </div>
   </body>
-</html>`;
+</html>`
+  );
 };
 
 // manager
 const gimmeManager = (manager) => {
-  return
+  return (
   `<div class="card employee-card m-3 shadow-lg col-3">
   <div class="card-header bg-info text-white">
       <h2 class="card-title">${manager.name}</h2>
@@ -64,12 +66,48 @@ const gimmeManager = (manager) => {
           <li class="list-group-item">Office Number: ${manager.officeNumber}</li>
       </ul>
   </div>
-</div>`;
+</div>`
+  )
 };
 
 // engineer(s)
-
+const gimmeEngineer = (engineer) => {
+  return (
+  `<div class="card employee-card m-3 shadow-lg col-3">
+    <div class="card-header bg-info text-white">
+        <h2 class="card-title">${engineer.name}</h2>
+        <h3 class="card-title"><i class="fas fa-laptop-code"></i></h3>
+    </div>
+    <div class="card-body bg-light">
+        <ul class="list-group font-weight-bold">
+            <li class="list-group-item">ID: ${engineer.id}</li>
+            <li class="list-group-item">Email: ${engineer.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">Github: ${engineer.GitHub}</li>
+        </ul>
+    </div>
+</div>`
+  )
+}
 
 // intern(s)
+const gimmeIntern = (intern) => {
+  return (
+  `<div class="card employee-card m-3 shadow-lg col-3">
+    <div class="card-header bg-info text-white">
+        <h2 class="card-title">${intern.name}</h2>
+        <h3 class="card-title"><i class="fas fa-graduation-cap"></i></h3>
+    </div>
+    <div class="card-body bg-light">
+        <ul class="list-group font-weight-bold">
+            <li class="list-group-item">ID: ${intern.id}</li>
+            <li class="list-group-item">Email: ${intern.email}<a href="mailto:{{ email }}">{{ email }}</a></li>
+            <li class="list-group-item">School: ${intern.school}</li>
+        </ul>
+    </div>
+</div>`
+)
+}
+
+
 
 module.exports = generateTeamHTML;
